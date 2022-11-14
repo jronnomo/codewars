@@ -18,11 +18,19 @@ function deleteNth(arr,n){
     return arr
   }
 
-
-// function deleteNth(arr,x) {
+// function deleteNth(arr, x) {
+//     // Create an empty object to store how many times each object exists
 //     var cache = {};
+//     // Call the filter function, the delegate is called once for each item
+//     // in the array and you return true or false depending on if it should
+//     // be kept or not
 //     return arr.filter(function(n) {
-//       cache[n] = (cache[n]||0) + 1;
+//       // Use the item as key and store the number of times the item has appeared.
+//       // (cache[n]||0) fetches the current value of cache[n] or zero if it doesn't
+//       // exist. Then add one to it and store it.
+//       cache[n] =(cache[n]||0) + 1;
+//       // If the number of times it has appeared in the array is less or equal to
+//       // the limit then return true so the filter function keeps it.
 //       return cache[n] <= x;
 //     });
 //   }
