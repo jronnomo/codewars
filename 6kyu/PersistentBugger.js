@@ -8,23 +8,23 @@
 // 4 --> 0 (because 4 is already a one-digit number)
 
 function breakdown(num){
-    let numSplit = num.toString().split('')
-    let count = 1
-    for(i = 0; i < numSplit.length; i++){
-      count *= numSplit[i]
-    }
-    return count
+  let numSplit = num.toString().split('')
+  let count = 1
+  for(i = 0; i < numSplit.length; i++){
+    count *= numSplit[i]
   }
+  return count
+}
   
-  function persistence(num) {
-    let output = num
-    let executeCount = 0
-    while(output.toString().length > 1){
-      output = breakdown(output)
-      executeCount++
-    }
-    return executeCount
+function persistence(num) {
+  let output = num
+  let executeCount = 0
+  while(output.toString().length > 1){
+    output = breakdown(output)
+    executeCount++
   }
+  return executeCount
+}
 
 
 // function persistence(num) {
